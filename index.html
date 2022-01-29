@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css" />   
+        <title>Experiment</title>
+    </head>
+    <body>
+
+    <div class="Title">Experiment</div>
+
+    <div id="container">
+        <video autoplay="true" id="videoElement"></video>
+            <div id="controls">
+                <button class="control-btn", onclick="start()">Start</button>
+                <button class="control-btn", onclick="stop()">Stop</button>
+                <button class="control-btn", id="capture">Capture</button>
+
+            </div>
+        </div>
+
+    </body>
+
+    <script>
+
+        let video = document.querySelector("#videoElement");
+
+        function start(e) {
+            if (navigator.mediaDevices.getUserMedia) {
+                    navigator.mediaDevices.getUserMedia({ video: true })
+                        .then(function (stream) {
+                            video.srcObject = stream;
+                         })
+                        .catch(function (err0r) {
+                        alert("Something went wrong!");
+                     });
+             }
+        }
+
+        function stop(e) {
+            var stream = video.srcObject;
+            var tracks = stream.getTracks();
+
+            for (var i = 0; i < tracks.length; i++) {
+                var track = tracks[i];
+                track.stop();
+            }
+            video.srcObject = null;
+        }
+
+    </script>
+</html>

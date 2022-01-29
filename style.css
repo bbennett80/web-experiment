@@ -1,0 +1,55 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+
+:root {
+--text-style: Arial, sans-serif;
+}
+
+.Title {
+    font-family: var(--text-style);
+    text-align: center;
+    font-size: 50px;
+    font-weight: bolder
+}
+ 
+#container {
+	margin: 0px auto;
+	width: 600px;
+	height: 400px;
+}
+
+#videoElement {
+	width: 800px;
+	height: 600px;
+	background-color: #ccc;
+}
+
+#contols {
+    display: flex;
+    justify-content: auto;
+}
+
+.control-btn {
+    display: inline-block;
+    background: #ccc;
+    color: #333;
+    min-width: 135px;
+    padding: 20px 32px;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 14px;
+    border: none;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.control-btn:hover {
+    background: steelblue;
+}
