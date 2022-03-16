@@ -17,11 +17,6 @@
     font-weight: bolder
 }
  
-#container {
-	margin: 0px auto;
-	width: 600px;
-	height: 400px;
-}
 
 #videoElement {
 	width: 800px;
@@ -52,4 +47,5 @@
 
 .control-btn:hover {
     background: steelblue;
+    color: white;
 }
