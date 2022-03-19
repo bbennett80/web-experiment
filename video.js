@@ -15,11 +15,11 @@ function start(e) {
 }
 
 function stop(e) {
-    var stream = video.srcObject;
-    var tracks = stream.getTracks();
+    const stream = video.srcObject;
+    const tracks = stream.getTracks();
 
-    for (var i = 0; i < tracks.length; i++) {
-        var track = tracks[i];
+    for (let i = 0; i < tracks.length; i++) {
+        let track = tracks[i];
         track.stop();
     }
     video.srcObject = null;
